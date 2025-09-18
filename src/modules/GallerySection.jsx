@@ -170,20 +170,23 @@ const GallerySection = () => {
   };
 
   return (
-    <section className="py-16 lg:py-24 bg-slate-50">
+    <section
+      className="py-16 lg:py-24"
+      style={{ backgroundColor: "rgb(var(--bg-primary)/1)" }}
+    >
       <div className="container-custom">
         {/* Section Header */}
         <div className="text-center mb-12">
-          <div className="inline-flex items-center space-x-2 bg-white border border-slate-200 text-slate-700 px-4 py-2 rounded-full text-sm font-medium mb-6 shadow-sm">
+          <div className="inline-flex items-center space-x-2  px-4 py-2 rounded-full text-sm font-medium mb-6 shadow-sm">
             <galleryConfig.badgeIcon className="w-4 h-4" />
             <span>{galleryConfig.badge}</span>
           </div>
 
-          <h2 className="text-3xl lg:text-4xl font-bold text-slate-900 mb-6">
+          <h2 className="text-3xl lg:text-4xl font-bold  mb-6">
             {galleryConfig.title}
           </h2>
 
-          <p className="text-lg text-slate-600 max-w-3xl mx-auto leading-relaxed">
+          <p className="text-lg  max-w-3xl mx-auto leading-relaxed">
             {galleryConfig.subtitle}
           </p>
         </div>
@@ -201,8 +204,8 @@ const GallerySection = () => {
                     px-4 py-2 rounded-lg text-sm font-medium transition-all duration-200
                     ${
                       activeCategory === category.id
-                        ? "bg-primary-600 text-black shadow-lg"
-                        : "bg-white text-slate-600 hover:bg-slate-50 border border-slate-200"
+                        ? "bg-primary-600  shadow-lg"
+                        : " border "
                     }
                   `}
                 >
@@ -226,14 +229,14 @@ const GallerySection = () => {
                   placeholder="Search projects..."
                   value={searchTerm}
                   onChange={(e) => setSearchTerm(e.target.value)}
-                  className="pl-10 pr-4 py-2 border border-slate-200 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-transparent text-sm"
+                  className="pl-10 pr-4 py-2 border  rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-transparent text-sm"
                 />
               </div>
             )}
 
             {/* View Toggle */}
             {galleryConfig.showViewToggle && (
-              <div className="flex bg-white border border-slate-200 rounded-lg p-1">
+              <div className="flex  border  rounded-lg p-1">
                 <button
                   onClick={() => setViewMode("grid")}
                   className={`
@@ -277,7 +280,7 @@ const GallerySection = () => {
             <div
               key={project.id}
               className={`
-                group bg-white rounded-2xl overflow-hidden shadow-sm border border-slate-200 
+                 rounded-2xl overflow-hidden shadow-sm border border-slate-200 
                 hover:shadow-lg hover:border-slate-300 transition-all duration-300
                 ${viewMode === "list" ? "flex items-center gap-6 p-6" : ""}
                 ${project.featured ? "ring-2 ring-primary-200" : ""}
@@ -301,7 +304,7 @@ const GallerySection = () => {
                 />
 
                 {/* Overlay */}
-                <div className="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-40 transition-all duration-300 flex items-center justify-center">
+                <div className="absolute inset-0 bg-black/50 transition-all duration-300 flex items-center justify-center">
                   <div className="flex items-center space-x-2 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                     {project.liveUrl && (
                       <a
@@ -349,12 +352,12 @@ const GallerySection = () => {
 
               {/* Project Content */}
               <div className={`${viewMode === "grid" ? "p-6" : "flex-grow"}`}>
-                <h3 className="text-lg font-semibold text-slate-900 mb-2 group-hover:text-primary-600 transition-colors duration-200">
+                <h3 className="text-lg font-semibold  mb-2 group-hover:text-primary-600 transition-colors duration-200">
                   {project.title}
                 </h3>
 
                 <p
-                  className={`text-slate-600 leading-relaxed mb-4 ${
+                  className={` leading-relaxed mb-4 ${
                     viewMode === "list" ? "text-sm" : ""
                   }`}
                 >

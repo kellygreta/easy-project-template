@@ -102,20 +102,20 @@ const ServicesSection = () => {
   };
 
   return (
-    <section className="py-20 lg:py-28 bg-gradient-to-b from-white to-slate-50">
+    <section className="py-20 lg:py-28 ">
       <div className="container-custom">
         {/* Section Header */}
         <div className="text-center mb-20">
-          <div className="inline-flex items-center space-x-2 bg-white border border-slate-200 text-slate-700 px-4 py-2 rounded-full text-sm font-medium mb-6 shadow-sm">
+          <div className="inline-flex items-center space-x-2  border  px-4 py-2 rounded-full text-sm font-medium mb-6 shadow-sm">
             <sectionConfig.badgeIcon className="w-4 h-4" />
             <span>{sectionConfig.badge}</span>
           </div>
 
-          <h2 className="text-3xl lg:text-4xl font-extrabold text-slate-900 mb-6 tracking-tight">
+          <h2 className="text-3xl lg:text-4xl font-extrabold  mb-6 tracking-tight">
             {sectionConfig.title}
           </h2>
 
-          <p className="text-lg text-slate-600 max-w-2xl mx-auto leading-relaxed">
+          <p className="text-lg  max-w-2xl mx-auto leading-relaxed">
             {sectionConfig.subtitle}
           </p>
 
@@ -124,12 +124,12 @@ const ServicesSection = () => {
             {stats.map((stat, index) => (
               <div
                 key={index}
-                className="text-center p-4 rounded-xl bg-white shadow-sm hover:shadow-md transition"
+                className="text-center p-4 rounded-xl  shadow-sm hover:shadow-md transition"
               >
                 <div className="text-3xl font-bold text-primary-600 mb-1">
                   {stat.number}
                 </div>
-                <div className="text-sm text-slate-600">{stat.label}</div>
+                <div className="text-sm ">{stat.label}</div>
               </div>
             ))}
           </div>
@@ -144,18 +144,18 @@ const ServicesSection = () => {
               <div
                 key={service.id}
                 className={`
-                  relative bg-white rounded-2xl p-8 border-2 transition-all duration-300 hover:shadow-xl hover:-translate-y-1
+                  relative  rounded-2xl p-8 border-2 transition-all duration-300 hover:shadow-xl hover:-translate-y-1
                   ${
                     service.featured
                       ? "border-primary-200 shadow-lg scale-105"
-                      : "border-slate-200 hover:border-slate-300"
+                      : ""
                   }
                 `}
               >
                 {/* Featured Badge */}
                 {service.featured && (
                   <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
-                    <div className="bg-white/20 backdrop-blur-md text-black text-xs font-semibold px-3 py-1 rounded-full flex items-center space-x-1 shadow-md border border-black/30">
+                    <div className=" backdrop-blur-md  text-xs font-semibold px-3 py-1 rounded-full flex items-center space-x-1 shadow-md border">
                       <Star className="w-3 h-3" />
                       <span>Popular</span>
                     </div>
@@ -170,21 +170,16 @@ const ServicesSection = () => {
                 </div>
 
                 {/* Content */}
-                <h3 className="text-xl font-semibold text-slate-900 mb-3">
-                  {service.title}
-                </h3>
+                <h3 className="text-xl font-semibold  mb-3">{service.title}</h3>
 
-                <p className="text-slate-600 text-sm leading-relaxed mb-5">
+                <p className=" text-sm leading-relaxed mb-5">
                   {service.description}
                 </p>
 
                 {/* Features */}
                 <ul className="space-y-2 mb-6">
                   {service.features.map((feature, idx) => (
-                    <li
-                      key={idx}
-                      className="flex items-center text-sm text-slate-600"
-                    >
+                    <li key={idx} className="flex items-center text-sm ">
                       <div
                         className={`w-1.5 h-1.5 ${colors.iconBg} rounded-full mr-2`}
                       ></div>
@@ -199,8 +194,8 @@ const ServicesSection = () => {
                   w-full py-2 px-4 rounded-lg font-medium text-sm transition-all duration-200
                   ${
                     service.featured
-                      ? "bg-primary-600 border border-primary-600 text-white hover:bg-primary-700 hover:border-primary-700"
-                      : `border-2 ${colors.border} text-slate-700 hover:${colors.bg}`
+                      ? " border "
+                      : `border-2 ${colors.border}  hover:${colors.bg}`
                   }
                 `}
                 >
@@ -214,17 +209,17 @@ const ServicesSection = () => {
         {/* Bottom CTA */}
         {sectionConfig.showCta && (
           <div className="text-center">
-            <div className="inline-flex items-center bg-white border border-slate-200 rounded-2xl p-8 shadow-sm hover:shadow-md transition">
+            <div className="inline-flex items-center  border  rounded-2xl p-8 shadow-sm hover:shadow-md transition">
               <div className="flex items-center space-x-6">
                 <div className="flex items-center justify-center w-14 h-14 bg-primary-50 rounded-xl">
                   <Target className="w-7 h-7 text-primary-600" />
                 </div>
 
                 <div className="text-left">
-                  <h4 className="text-lg font-semibold text-slate-900">
+                  <h4 className="text-lg font-semibold ">
                     Got a project in mind?
                   </h4>
-                  <p className="text-sm text-slate-600">
+                  <p className="text-sm ">
                     Let’s talk and build the perfect solution for your needs.
                   </p>
                 </div>
