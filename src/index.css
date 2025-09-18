@@ -1,1 +1,112 @@
 @import "tailwindcss";
+
+/* -------------------------------
+   1️⃣ Theme Variables
+---------------------------------*/
+
+/* Light Mode */
+:root {
+  --font-sans: Inter, system-ui, sans-serif;
+
+  --color-primary: 59 130 246; /* blue-500 */
+  --color-primary-hover: 37 99 235; /* blue-600 */
+  --color-primary-light: 239 246 255; /* blue-50 */
+  
+  --text-primary: 17 24 39; /* slate-900 */
+  --text-secondary: 75 85 99; /* slate-600 */
+  
+  --bg-primary: 248 250 252; /* slate-50 */
+  --bg-secondary: 255 255 255; /* white */
+  --border-color: 226 232 240; /* slate-200 */
+}
+
+/* Dark Mode */
+.dark {
+  --color-primary: 167 139 250; /* violet-400 */
+  --color-primary-hover: 139 92 246; /* violet-500 */
+  --color-primary-light: 196 181 253; /* violet-300 */
+  
+  --text-primary: 243 244 246; /* gray-100 */
+  --text-secondary: 156 163 175; /* gray-400 */
+  
+  --bg-primary: 24 24 27; /* zinc-900 */
+  --bg-secondary: 39 39 42; /* zinc-800 */
+  --border-color: 55 65 81; /* slate-700 */
+}
+
+/* -------------------------------
+   2️⃣ Base Styles
+---------------------------------*/
+
+html {
+  @apply scroll-smooth;
+}
+
+body {
+  font-family: var(--font-sans);
+  background-color: rgb(var(--bg-primary)/1);
+  color: rgb(var(--text-primary)/1);
+  @apply antialiased transition-colors duration-300;
+}
+
+/* -------------------------------
+   3️⃣ Utility Classes
+---------------------------------*/
+
+.container-custom {
+  @apply container mx-auto px-4 sm:px-6 lg:px-8;
+}
+
+.btn-primary {
+  @apply font-medium px-6 py-2 rounded-lg transition-colors duration-200;
+  background-color: rgb(var(--color-primary)/1);
+  color: rgb(var(--bg-secondary)/1);
+}
+.btn-primary:hover {
+  background-color: rgb(var(--color-primary-hover)/1);
+}
+
+.card {
+  @apply rounded-xl shadow-sm border p-6 transition-colors duration-300;
+  background-color: rgb(var(--bg-secondary)/1);
+  border-color: rgb(var(--border-color)/1);
+  color: rgb(var(--text-primary)/1);
+}
+
+.text-primary {
+  color: rgb(var(--text-primary)/1);
+}
+
+.text-secondary {
+  color: rgb(var(--text-secondary)/1);
+}
+
+.bg-section {
+  background-color: rgb(var(--bg-primary)/1);
+}
+
+.bg-section-alt {
+  background-color: rgb(var(--bg-secondary)/1);
+}
+
+.border-custom {
+  border-color: rgb(var(--border-color)/1);
+}
+
+/* -------------------------------
+   4️⃣ Dark Mode Specific Adjustments
+---------------------------------*/
+
+/* Optional: for hover effects, shadows, etc. */
+.dark .btn-primary:hover {
+  background-color: rgb(var(--color-primary-hover)/1);
+}
+
+.dark .card {
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+/* Smooth transition for all colors */
+* {
+  transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+}
