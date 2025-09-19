@@ -1,19 +1,22 @@
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Layout from "./components/Layout";
-import ExampleModule from "./modules/ExampleModule";
-import HeroSection from "./modules/HeroSection";
-import AboutSection from "./modules/AboutSection";
-import ServicesSection from "./modules/ServicesSection";
-import GallerySection from "./modules/GallerySection";
+
+// Importa le pagine
+import HomePage from "./pages/HomePage";
+import AboutPage from "./pages/AboutPage";
 
 export default function App() {
   return (
-    <Layout>
-      <HeroSection />
-      <AboutSection />
+    <Router>
+      <Layout>
+        <Routes>
+          {/* Homepage */}
+          <Route path="easy-project-template/" element={<HomePage />} />
 
-      <ServicesSection />
-      <GallerySection />
-      {/* <ExampleModule /> */}
-    </Layout>
+          {/* AboutMe page */}
+          <Route path="easy-project-template/about" element={<AboutPage />} />
+        </Routes>
+      </Layout>
+    </Router>
   );
 }
