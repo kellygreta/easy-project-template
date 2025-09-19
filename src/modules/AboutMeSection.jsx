@@ -18,6 +18,8 @@ import {
   ExternalLink,
 } from "lucide-react";
 
+import ASCIIText from "../components/ASCIIText";
+
 const AboutMeSection = () => {
   // Personal information - easily configurable
   const personalInfo = {
@@ -141,7 +143,7 @@ const AboutMeSection = () => {
   ];
 
   return (
-    <section className="py-16 lg:py-24 bg-section-alt">
+    <section className="py-16 lg:py-24 ">
       <div className="container-custom">
         {/* Header */}
         <div className="text-center mb-16">
@@ -153,7 +155,6 @@ const AboutMeSection = () => {
           <h2 className="text-3xl lg:text-4xl font-bold text-primary mb-4">
             About Me
           </h2>
-
           <p className="text-lg text-secondary max-w-2xl mx-auto leading-relaxed">
             Learn more about me, my skills, and what I’m passionate about
           </p>
@@ -388,6 +389,15 @@ const AboutMeSection = () => {
             </div>
           </div>
         </div>
+
+        {/* Funny ASCII Text art
+        <div className="text-center">
+          <ASCIIText
+            text="the more you know!"
+            enableWaves={false}
+            asciiFontSize={4}
+          />
+        </div> */}
 
         {/* Fun Facts */}
         <div className="text-center">
