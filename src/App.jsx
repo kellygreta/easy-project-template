@@ -5,6 +5,7 @@ import Layout from "./components/Layout";
 import HomePage from "./pages/HomePage";
 import AboutPage from "./pages/AboutPage";
 import ProjectsPage from "./pages/ProjectsPage";
+import BlogPage from "./pages/BlogPage";
 
 export default function App() {
   return (
@@ -22,6 +23,9 @@ export default function App() {
             path="easy-project-template/projects"
             element={<ProjectsPage />}
           />
+
+          {/* Blog page */}
+          <Route path="easy-project-template/blog" element={<BlogPage />} />
         </Routes>
       </Layout>
     </Router>

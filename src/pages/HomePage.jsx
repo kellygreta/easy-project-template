@@ -1,7 +1,7 @@
 import HeroSection from "../modules/HeroSection";
 import AboutSection from "../modules/AboutSection";
 import ServicesSection from "../modules/ServicesSection";
-import GallerySection from "../modules/GallerySection";
+import BlogPostPage from "./BlogPostPage";
 // import ExampleModule from "../modules/ExampleModule";
 
 export default function HomePage() {
@@ -10,6 +10,8 @@ export default function HomePage() {
       <HeroSection />
       <AboutSection />
       <ServicesSection />
+      {/* <BlogPostPage /> */}
+
       {/* <ExampleModule /> */}
     </>
   );

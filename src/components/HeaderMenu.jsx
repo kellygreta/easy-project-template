@@ -22,6 +22,11 @@ const HeaderMenu = () => {
       href: "easy-project-template/projects",
       current: location.pathname === "/projects",
     },
+    {
+      name: "Blog",
+      href: "easy-project-template/blog",
+      current: location.pathname === "/blog",
+    },
   ];
 
   const toggleMobileMenu = () => {
