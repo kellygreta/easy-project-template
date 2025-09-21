@@ -41,7 +41,7 @@ export function ThemeProvider({ children }) {
       {/* Theme toggle button */}
       <button
         onClick={toggleTheme}
-        className="fixed top-4 right-4 z-50 p-3 rounded-full bg-white/10 backdrop-blur-sm border border-white/20 text-white hover:bg-white/20 transition-all duration-300 shadow-lg"
+        className="fixed top-20 right-4 z-50 p-3 rounded-full  backdrop-blur-sm border transition-all duration-300 shadow-lg"
         aria-label="Toggle theme"
       >
         {isDark ? <Sun size={20} /> : <Moon size={20} />}

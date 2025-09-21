@@ -4,6 +4,7 @@ import Layout from "./components/Layout";
 // Importa le pagine
 import HomePage from "./pages/HomePage";
 import AboutPage from "./pages/AboutPage";
+import ProjectsPage from "./pages/ProjectsPage";
 
 export default function App() {
   return (
@@ -15,6 +16,12 @@ export default function App() {
 
           {/* AboutMe page */}
           <Route path="easy-project-template/about" element={<AboutPage />} />
+
+          {/* Project page */}
+          <Route
+            path="easy-project-template/projects"
+            element={<ProjectsPage />}
+          />
         </Routes>
       </Layout>
     </Router>

@@ -13,9 +13,14 @@ const HeaderMenu = () => {
       current: location.pathname === "/",
     },
     {
-      name: "About Me",
+      name: "About",
       href: "easy-project-template/about",
       current: location.pathname === "/about",
+    },
+    {
+      name: "Projects",
+      href: "easy-project-template/projects",
+      current: location.pathname === "/projects",
     },
   ];
 
@@ -24,7 +29,7 @@ const HeaderMenu = () => {
   };
 
   return (
-    <header className=" border-b border-slate-200  sticky top-0 z-40 shadow-sm transition-colors duration-300">
+    <header className=" glass-effect  backdrop-blur-md sticky top-0 z-40 shadow-sm transition-colors duration-300">
       <div className="container-custom">
         <div className="flex items-center justify-between h-16">
           {/* Logo/Brand */}
@@ -33,10 +38,10 @@ const HeaderMenu = () => {
               <Sparkles className="w-5 h-5" />
             </div>
             <div>
-              <h1 className="text-xl font-bold text-slate-900 dark:text-slate-100 transition-colors duration-300">
+              <h1 className="text-xl font-bold ransition-colors duration-300">
                 My React Template
               </h1>
-              <p className="text-sm text-slate-600 dark:text-slate-400 transition-colors duration-300">
+              <p className="text-sm  transition-colors duration-300">
                 Modern & Modular
               </p>
             </div>
