@@ -63,7 +63,7 @@ const HeaderMenu = () => {
                   ${
                     item.current
                       ? "bg-primary-100 dark:bg-primary-900/30 text-primary-700 dark:text-primary-300"
-                      : "text-slate-600 dark:text-slate-300 hover:text-slate-900 dark:hover:text-slate-100 hover:bg-slate-100 dark:hover:bg-slate-800"
+                      : " hover:text-slate-900  hover:bg-slate-100 dark:hover:bg-slate-800"
                   }
                 `}
               >
@@ -75,7 +75,7 @@ const HeaderMenu = () => {
           {/* Mobile Menu Button */}
           <button
             onClick={toggleMobileMenu}
-            className="md:hidden p-2 rounded-lg text-slate-600 dark:text-slate-300 hover:text-slate-900 dark:hover:text-slate-100 hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors duration-200"
+            className="md:hidden p-2 rounded-lg  hover:text-slate-900 dark:hover:text-slate-100 hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors duration-200"
             aria-label="Toggle mobile menu"
           >
             {isMobileMenuOpen ? (
@@ -99,8 +99,8 @@ const HeaderMenu = () => {
                     block px-4 py-2 rounded-lg text-base font-medium transition-all duration-200
                     ${
                       item.current
-                        ? "bg-primary-100 dark:bg-primary-900/30 text-primary-700 dark:text-primary-300"
-                        : "text-slate-600 dark:text-slate-300 hover:text-slate-900 dark:hover:text-slate-100 hover:bg-slate-100 dark:hover:bg-slate-800"
+                        ? " "
+                        : " hover:text-slate-900 dark:hover:text-slate-100 hover:bg-slate-100 dark:hover:bg-slate-800"
                     }
                   `}
                 >

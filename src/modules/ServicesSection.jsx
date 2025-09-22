@@ -102,11 +102,17 @@ const ServicesSection = () => {
   };
 
   return (
-    <section className="py-20 lg:py-28 ">
+    <section className="py-8 ">
       <div className="container-custom">
         {/* Section Header */}
         <div className="text-center mb-20">
-          <div className="inline-flex items-center space-x-2  border  px-4 py-2 rounded-full text-sm font-medium mb-6 shadow-sm">
+          <div
+            className="inline-flex items-center space-x-2 px-4 py-2 rounded-full text-sm font-medium mb-4"
+            style={{
+              backgroundColor: "rgb(var(--bg-secondary)/1)",
+              color: "rgb(var(--text-secondary)/1)",
+            }}
+          >
             <sectionConfig.badgeIcon className="w-4 h-4" />
             <span>{sectionConfig.badge}</span>
           </div>
@@ -124,7 +130,7 @@ const ServicesSection = () => {
             {stats.map((stat, index) => (
               <div
                 key={index}
-                className="text-center p-4 rounded-xl  shadow-sm hover:shadow-md transition"
+                className="text-center p-4 rounded-xl card shadow-sm hover:shadow-md transition"
               >
                 <div className="text-3xl font-bold text-primary-600 mb-1">
                   {stat.number}
@@ -144,7 +150,7 @@ const ServicesSection = () => {
               <div
                 key={service.id}
                 className={`
-                  relative  rounded-2xl p-8 border-2 transition-all duration-300 hover:shadow-xl hover:-translate-y-1
+                  relative  rounded-2xl p-8 card transition-all duration-300 hover:shadow-xl hover:-translate-y-1
                   ${
                     service.featured
                       ? "border-primary-200 shadow-lg scale-105"
@@ -205,33 +211,6 @@ const ServicesSection = () => {
             );
           })}
         </div>
-
-        {/* Bottom CTA */}
-        {sectionConfig.showCta && (
-          <div className="text-center">
-            <div className="inline-flex items-center  border  rounded-2xl p-8 shadow-sm hover:shadow-md transition">
-              <div className="flex items-center space-x-6">
-                <div className="flex items-center justify-center w-14 h-14 bg-primary-50 rounded-xl">
-                  <Target className="w-7 h-7 text-primary-600" />
-                </div>
-
-                <div className="text-left">
-                  <h4 className="text-lg font-semibold ">
-                    Got a project in mind?
-                  </h4>
-                  <p className="text-sm ">
-                    Let’s talk and build the perfect solution for your needs.
-                  </p>
-                </div>
-
-                <button className="btn-primary flex items-center space-x-2 ml-6">
-                  <span>{sectionConfig.ctaText}</span>
-                  <ArrowRight className="w-4 h-4" />
-                </button>
-              </div>
-            </div>
-          </div>
-        )}
       </div>
     </section>
   );
