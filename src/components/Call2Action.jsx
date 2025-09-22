@@ -51,7 +51,7 @@ export default function Call2Action() {
               <a
                 href="https://github.com/kellygreta"
                 target="_blank"
-                className="font-bold px-6 py-3 rounded-lg transition-all duration-300 flex items-center justify-center space-x-2 shadow-md hover:shadow-lg border-2 border-slate-200 "
+                className="font-bold px-6 py-3 btn-secondary rounded-lg transition-all duration-300 flex items-center justify-center space-x-2 shadow-md hover:shadow-lg  "
               >
                 <Eye className="w-4 h-4" />
                 <span>View My Work</span>

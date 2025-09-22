@@ -25,13 +25,19 @@ const AboutMeSection = () => {
       <div className="container-custom">
         {/* Header */}
         <div className="text-center mb-16">
-          <div className="inline-flex items-center space-x-2 bg-primary-50 dark:bg-primary-900/20 border border-primary-200 dark:border-primary-700 text-primary-700 dark:text-primary-300 px-4 py-2 rounded-full text-sm font-medium mb-6">
+          <div
+            className="inline-flex items-center space-x-2 px-4 py-2 rounded-full text-sm font-medium mb-4"
+            style={{
+              backgroundColor: "rgb(var(--bg-secondary)/1)",
+              color: "rgb(var(--text-secondary)/1)",
+            }}
+          >
             <User className="w-4 h-4" />
             <span>About Me</span>
           </div>
 
           <h2 className="text-3xl lg:text-4xl font-bold text-primary mb-4">
-            About Me
+            Learn more about me
           </h2>
           <p className="text-lg text-secondary max-w-2xl mx-auto leading-relaxed">
             Learn more about me, my skills, and what I’m passionate about
@@ -48,14 +54,12 @@ const AboutMeSection = () => {
                 <img
                   src={personalInfo.avatar}
                   alt={personalInfo.name}
-                  className="w-32 h-32 rounded-full mx-auto mb-4 ring-4 ring-primary-100 dark:ring-primary-800"
+                  className="w-32 h-32 rounded-full mx-auto mb-4 ring-1 "
                 />
                 <h3 className="text-xl font-bold text-primary mb-1">
                   {personalInfo.name}
                 </h3>
-                <p className="text-primary-600 dark:text-primary-400 font-medium mb-2">
-                  {personalInfo.title}
-                </p>
+                <p className=" font-medium mb-2">{personalInfo.title}</p>
 
                 {/* Status */}
                 <div className="inline-flex items-center space-x-2 bg-green-100 dark:bg-green-900/20 text-green-800 dark:text-green-300 px-3 py-1 rounded-full text-sm">
@@ -71,11 +75,11 @@ const AboutMeSection = () => {
               {/* Quick Info */}
               <div className="space-y-3 mb-6">
                 <div className="flex items-center space-x-3 text-secondary">
-                  <MapPin className="w-4 h-4 text-primary-500" />
+                  <MapPin className="w-4 h-4" />
                   <span>{personalInfo.location}</span>
                 </div>
                 <div className="flex items-center space-x-3 text-secondary">
-                  <Calendar className="w-4 h-4 text-primary-500" />
+                  <Calendar className="w-4 h-4 " />
                   <span>{personalInfo.experience} experience</span>
                 </div>
               </div>
@@ -88,7 +92,7 @@ const AboutMeSection = () => {
                     href={social.url}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className={`p-2 bg-slate-100 dark:bg-slate-700 rounded-lg transition-all duration-200 ${social.color} hover:scale-110`}
+                    className={`p-2 rounded-lg btn-secondary transition-all duration-200 ${social.color} hover:scale-110`}
                   >
                     <social.icon className="w-5 h-5" />
                   </a>
@@ -108,7 +112,7 @@ const AboutMeSection = () => {
 
                 <a
                   href={`mailto:${personalInfo.email}`}
-                  className="w-full bg-slate-100 dark:bg-slate-700 hover:bg-slate-200 dark:hover:bg-slate-600 text-slate-700 dark:text-slate-200 font-medium py-2 px-4 rounded-lg transition-colors duration-200 flex items-center justify-center space-x-2"
+                  className="w-full btn-secondary font-medium py-2 px-4 rounded-lg transition-colors duration-200 flex items-center justify-center space-x-2"
                 >
                   <Mail className="w-4 h-4" />
                   <span>Contact Me</span>
@@ -124,6 +128,24 @@ const AboutMeSection = () => {
               <h4 className="text-xl font-bold text-primary mb-4">My Story</h4>
               <p className="text-secondary leading-relaxed text-lg">
                 {personalInfo.bio}
+                <br /> <br />
+                Lorem ipsum dolor sit amet, consectetur adipisci elit, sed
+                eiusmod tempor incidunt ut labore et dolore magna aliqua. Ut
+                enim ad minim veniam, quis nostrum exercitationem ullam corporis
+                suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur.
+                Quis aute iure reprehenderit in voluptate velit esse cillum
+                dolore eu fugiat nulla pariatur. Excepteur sint obcaecat
+                cupiditat non proident, sunt in culpa qui officia deserunt
+                mollit anim id est laborum
+                <br /> <br />
+                Lorem ipsum dolor sit amet, consectetur adipisci elit, sed
+                eiusmod tempor incidunt ut labore et dolore magna aliqua. Ut
+                enim ad minim veniam, quis nostrum exercitationem ullam corporis
+                suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur.
+                Quis aute iure reprehenderit in voluptate velit esse cillum
+                dolore eu fugiat nulla pariatur. Excepteur sint obcaecat
+                cupiditat non proident, sunt in culpa qui officia deserunt
+                mollit anim id est laborum
               </p>
             </div>
 
@@ -134,19 +156,16 @@ const AboutMeSection = () => {
               </h4>
               <div className="space-y-6">
                 {skills.map((skill, index) => (
-                  <div
-                    key={index}
-                    className="bg-slate-50 dark:bg-slate-800/50 rounded-xl p-6"
-                  >
+                  <div key={index} className="card rounded-xl p-6">
                     <div className="flex items-center space-x-3 mb-4">
-                      <div className="p-2 bg-white dark:bg-slate-700 rounded-lg">
+                      <div className="p-2 rounded-lg border">
                         <skill.icon className="w-5 h-5 text-primary-600" />
                       </div>
                       <div className="flex-grow">
                         <h5 className="font-semibold text-primary">
                           {skill.category}
                         </h5>
-                        <div className="flex items-center space-x-2 mt-1">
+                        {/* <div className="flex items-center space-x-2 mt-1">
                           <div className="flex-grow bg-slate-200 dark:bg-slate-700 rounded-full h-2">
                             <div
                               className={`h-2 rounded-full ${skill.color} transition-all duration-1000`}
@@ -156,7 +175,7 @@ const AboutMeSection = () => {
                           <span className="text-sm text-secondary font-medium">
                             {skill.level}%
                           </span>
-                        </div>
+                        </div> */}
                       </div>
                     </div>
 
@@ -164,7 +183,7 @@ const AboutMeSection = () => {
                       {skill.technologies.map((tech, techIndex) => (
                         <span
                           key={techIndex}
-                          className="bg-white dark:bg-slate-700 text-slate-700 dark:text-slate-300 text-sm px-3 py-1 rounded-lg border border-slate-200 dark:border-slate-600"
+                          className=" text-sm px-3 py-1 rounded-lg border "
                         >
                           {tech}
                         </span>
@@ -184,7 +203,7 @@ const AboutMeSection = () => {
                 {interests.map((interest, index) => (
                   <div
                     key={index}
-                    className="flex items-center space-x-4 p-4 bg-slate-50 dark:bg-slate-800/50 rounded-xl"
+                    className="flex items-center space-x-4 p-4 card rounded-xl"
                   >
                     <div className="p-3 bg-primary-100 dark:bg-primary-900/30 rounded-xl">
                       <interest.icon className="w-6 h-6 text-primary-600 dark:text-primary-400" />
@@ -239,14 +258,14 @@ const AboutMeSection = () => {
                         >
                           {item.type === "work" ? "Work" : "Education"}
                         </span>
-                        <span className="text-sm font-bold text-primary-600 dark:text-primary-400">
+                        <span className="text-sm font-bold text-primary">
                           {item.year}
                         </span>
                       </div>
                       <h5 className="font-bold text-primary mb-1">
                         {item.title}
                       </h5>
-                      <p className="text-primary-600 dark:text-primary-400 font-medium mb-2">
+                      <p className="text-primary font-medium mb-2">
                         {item.company}
                       </p>
                       <p className="text-secondary text-sm">
@@ -257,7 +276,7 @@ const AboutMeSection = () => {
 
                   {/* Timeline Dot */}
                   <div className="w-2/12 flex justify-center">
-                    <div className="w-4 h-4 bg-primary-600 rounded-full border-4 border-white dark:border-slate-900 relative z-10"></div>
+                    <div className="w-4 h-4 bg-primary-600 rounded-full border-10 border-slate-200 relative z-10"></div>
                   </div>
 
                   {/* Empty Space */}

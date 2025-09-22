@@ -6,6 +6,7 @@ import {
   Code2,
   Palette,
   Zap,
+  Github,
   Heart,
   BookOpen,
   Music,
@@ -20,12 +21,12 @@ import {
 
   // Personal information - easily configurable
  export const personalInfo = {
-    name: "Mario Rossi",
-    title: "Full Stack Developer",
-    location: "Milan, Italy",
-    experience: "5+ years",
+    name: "Kelly Greta",
+    title: "Junior Developer",
+    location: "Somewhere in Italy",
+    experience: "2+ years",
     avatar:
-      "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&q=80",
+      "https://avatars.githubusercontent.com/u/91347408?v=4",
     bio: "I am a passionate developer with over 5 years of experience in building modern web applications. I enjoy creating elegant and user-friendly solutions that solve real-world problems.",
     email: "nome.cognome@email.com",
     resumeUrl: "/resume.pdf", // Resume link
@@ -40,12 +41,12 @@ import {
       icon: Linkedin,
       color: "hover:text-blue-600",
     },
-    // {
-    //   platform: "GitHub",
-    //   url: "https:/GitHub.com",
-    //   icon: GitHub,
-    //   color: "hover:text-blue-400",
-    // },
+    {
+      platform: "GitHub",
+      url: "https:/https://github.com/kellygreta",
+      icon: Github,
+      color: "hover:text-purple-400",
+    },
     {
       platform: "Email",
       url: `mailto:${personalInfo.email}`,
