@@ -298,35 +298,6 @@ const AboutMeSection = () => {
             ))}
           </div>
         </div>
-
-        {/* CTA Final */}
-        <div className="text-center mt-16">
-          <div className="inline-flex items-center bg-slate-50 dark:bg-slate-800/50 border-2 border-slate-200 dark:border-slate-700 rounded-2xl p-8 group hover:border-primary-200 dark:hover:border-primary-700 transition-colors duration-300">
-            <div className="flex flex-col md:flex-row items-center space-y-4 md:space-y-0 md:space-x-6">
-              <div className="flex items-center justify-center w-16 h-16 bg-primary-50 dark:bg-primary-900/30 rounded-2xl group-hover:bg-primary-100 dark:group-hover:bg-primary-800/50 transition-colors duration-300">
-                <Heart className="w-8 h-8 text-primary-600 dark:text-primary-400" />
-              </div>
-
-              <div className="text-center md:text-left">
-                <h4 className="text-xl font-bold text-primary mb-2">
-                  Do you have a project in mind?
-                </h4>
-                <p className="text-secondary">
-                  Let’s talk! I’m always open to new challenges and interesting
-                  collaborations.
-                </p>
-              </div>
-
-              <a
-                href={`mailto:${personalInfo.email}`}
-                className="btn-primary flex items-center space-x-2"
-              >
-                <span>Let’s Collaborate</span>
-                <ExternalLink className="w-4 h-4" />
-              </a>
-            </div>
-          </div>
-        </div>
       </div>
     </section>
   );
