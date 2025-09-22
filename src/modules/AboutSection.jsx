@@ -45,12 +45,7 @@ const AboutSection = () => {
   ];
 
   return (
-    <section
-      className="py-16 lg:py-24"
-      style={{
-        backgroundColor: "rgb(var(--bg-primary)/1)",
-      }}
-    >
+    <section className="py-16 lg:py-24">
       <div className="container-custom">
         {/* Section Header */}
         <div className="text-center mb-16">

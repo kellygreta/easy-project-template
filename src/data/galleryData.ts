@@ -102,7 +102,7 @@ export  const categories = [
       image:
         "https://images.unsplash.com/photo-1626785774573-4b799315345d?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
       liveUrl: "https://brand-showcase-demo.vercel.app",
-      githubUrl: null,
+      githubUrl: "https://github.com/kellygreta",
       featured: false,
       status: "Completed",
     },
