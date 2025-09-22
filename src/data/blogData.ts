@@ -1,4 +1,4 @@
-const blogPost = {
+export const blogPost = {
   id: 1,
   title: "Building Scalable React Applications: Best Practices for 2024",
   slug: "building-scalable-react-applications-2024",
@@ -134,7 +134,7 @@ function App() {
 };
 
 // Related posts
-const relatedPosts = [
+export const relatedPosts = [
   {
     id: 2,
     title: "Advanced React Hooks Patterns",
@@ -171,7 +171,7 @@ const relatedPosts = [
 ];
 
 // Mock comments
-const comments = [
+export const comments = [
   {
     id: 1,
     author: {
@@ -224,7 +224,7 @@ const comments = [
 ];
 
 // Mock blog data
-const blogPosts = [
+export const blogPosts = [
   {
     id: 1,
     title: "Building Scalable React Applications: Best Practices for 2024",
@@ -359,7 +359,7 @@ const blogPosts = [
   },
 ];
 
-const categories = [
+export const categories = [
   {
     name: "All",
     count: blogPosts.length,
@@ -374,7 +374,7 @@ const categories = [
   { name: "Design", count: 1, color: "from-orange-500 to-orange-600" },
 ];
 
-const popularTags = [
+export const popularTags = [
   "React",
   "JavaScript",
   "CSS",

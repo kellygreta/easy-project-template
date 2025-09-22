@@ -717,59 +717,6 @@ const BlogPage = () => {
             </div>
           </div>
         </div>
-
-        {/* Call to Action Section */}
-        <section className="mt-20">
-          <div className="text-center">
-            <div className="inline-flex items-center bg-gradient-to-br from-slate-50 to-white dark:from-slate-800/50 dark:to-slate-700/50 border-2 border-slate-200 dark:border-slate-700 rounded-3xl p-8 group hover:border-primary-300 dark:hover:border-primary-600 transition-all duration-500 shadow-xl hover:shadow-2xl hover:-translate-y-2">
-              <div className="flex flex-col md:flex-row items-center space-y-6 md:space-y-0 md:space-x-8">
-                <div className="flex items-center justify-center w-20 h-20 bg-gradient-to-br from-primary-50 to-purple-50 dark:from-primary-900/30 dark:to-purple-900/30 rounded-3xl group-hover:from-primary-100 group-hover:to-purple-100 dark:group-hover:from-primary-800/50 dark:group-hover:to-purple-800/50 transition-all duration-300 shadow-lg">
-                  <Rocket className="w-10 h-10 text-primary-600 dark:text-primary-400 group-hover:scale-110 transition-transform duration-200" />
-                </div>
-
-                <div className="text-center md:text-left">
-                  <h3 className="text-2xl font-bold text-primary mb-3">
-                    Ready to Start Your Next Project?
-                  </h3>
-                  <p className="text-secondary text-lg mb-4 max-w-md">
-                    Let's collaborate and bring your ideas to life! I'm always
-                    excited to work on challenging projects and share knowledge.
-                  </p>
-                  <div className="flex flex-wrap gap-3 justify-center md:justify-start">
-                    <span className="text-xs bg-green-100 dark:bg-green-900/30 text-green-800 dark:text-green-300 px-3 py-2 rounded-full font-medium">
-                      ✓ Quick Response
-                    </span>
-                    <span className="text-xs bg-blue-100 dark:bg-blue-900/30 text-blue-800 dark:text-blue-300 px-3 py-2 rounded-full font-medium">
-                      ✓ Quality Focused
-                    </span>
-                    <span className="text-xs bg-purple-100 dark:bg-purple-900/30 text-purple-800 dark:text-purple-300 px-3 py-2 rounded-full font-medium">
-                      ✓ Long-term Support
-                    </span>
-                  </div>
-                </div>
-
-                <div className="flex flex-col space-y-3">
-                  <a
-                    href="mailto:hello@example.com"
-                    className="bg-gradient-to-r from-primary-600 to-purple-600 hover:from-primary-700 hover:to-purple-700 text-white font-bold px-6 py-3 rounded-lg transition-all duration-300 flex items-center justify-center space-x-2 shadow-lg hover:shadow-xl transform hover:-translate-y-1"
-                  >
-                    <Mail className="w-4 h-4" />
-                    <span>Get in Touch</span>
-                    <Sparkles className="w-4 h-4" />
-                  </a>
-
-                  <a
-                    href="#portfolio"
-                    className="bg-white dark:bg-slate-800 hover:bg-slate-50 dark:hover:bg-slate-700 text-primary-600 dark:text-primary-400 font-bold px-6 py-3 rounded-lg transition-all duration-300 flex items-center justify-center space-x-2 shadow-md hover:shadow-lg border-2 border-slate-200 dark:border-slate-600"
-                  >
-                    <Eye className="w-4 h-4" />
-                    <span>View My Work</span>
-                  </a>
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
       </div>
     </div>
   );
